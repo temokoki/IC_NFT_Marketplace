@@ -1,4 +1,4 @@
-# Simple IC_MessageBoard
+# IC_NFT_Marketplace
 
 Simple NFT marketplace with Internet Identity authentication integration, where each minted NFT is created as a separate canister. Backend is written in Motoko, frontend is built using React/JSX and MUI (material UI).
 
