@@ -1,0 +1,40 @@
+{
+  "canisters": {
+    "internet_identity": {
+      "type": "custom",
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "frontend": {}
+    },
+    "IC_NFT_Marketplace_backend": {
+      "main": "src/IC_NFT_Marketplace_backend/main.mo",
+      "type": "motoko"
+    },
+    "IC_NFT_Marketplace_frontend": {
+      "dependencies": [
+        "IC_NFT_Marketplace_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/IC_NFT_Marketplace_frontend/src/index.html"
+      },
+      "source": [
+        "src/IC_NFT_Marketplace_frontend/assets",
+        "dist/IC_NFT_Marketplace_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
